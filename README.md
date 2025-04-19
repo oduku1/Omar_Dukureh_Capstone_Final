@@ -16,53 +16,64 @@ Accurate predictions of full-season player stats can have wide-reaching benefits
  The data includes player statistics such as points, rebounds, assists, and minutes played.
 
 ### Data dictionary
-Column Name | Data Type | Description
-Age | float64 | Age of the player
-G | float64 | Number of games played
-GS | float64 | Number of games started
-MP | float64 | Minutes played
-FG | float64 | Field goals made
-FGA | float64 | Field goals attempted
-FG% | float64 | Field goal percentage
-3P | float64 | Three-point field goals made
-3PA | float64 | Three-point field goals attempted
-3P% | float64 | Three-point field goal percentage
-2P | float64 | Two-point field goals made
-2PA | float64 | Two-point field goals attempted
-2P% | float64 | Two-point field goal percentage
-eFG% | float64 | Effective field goal percentage
-FT | float64 | Free throws made
-FTA | float64 | Free throws attempted
-FT% | float64 | Free throw percentage
-ORB | float64 | Offensive rebounds
-DRB | float64 | Defensive rebounds
-TRB | float64 | Total rebounds
-AST | float64 | Assists
-STL | float64 | Steals
-BLK | float64 | Blocks
-TOV | float64 | Turnovers
-PF | float64 | Personal fouls
-PTS | float64 | Total points scored
-Year | int64 | Season year
-USG | float64 | Usage percentage — estimate of team plays used by the player while on floor
-TS% | float64 | True shooting percentage
-AST_TO | float64 | Assist-to-turnover ratio
-REB_per_min | float64 | Rebounds per minute
-PTS_per_FGA | float64 | Points scored per field goal attempt
-FT_rate | float64 | Free throw rate (FTA per FGA)
-3P_rate | float64 | Three-point attempt rate (3PA per FGA)
-EFF | float64 | Player efficiency rating
-TOV% | float64 | Turnover percentage (estimated percentage of possessions ending in a TO)
-PF_per_min | float64 | Personal fouls per minute
-STL_per_min | float64 | Steals per minute
-BLK_per_min | float64 | Blocks per minute
-TRB_rate | float64 | Rebound rate (estimated percentage of available rebounds grabbed)
-PTS_log | float64 | Log-transformed points
-AST_log | float64 | Log-transformed assists
-TRB_log | float64 | Log-transformed total rebounds
-STL_log | float64 | Log-transformed steals
-BLK_log | float64 | Log-transformed blocks
-TOV_log | float64 | Log-transformed turnovers
+
+<table>
+  <thead>
+    <tr>
+      <th>Column Name</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Age</td><td>float64</td><td>Age of the player</td></tr>
+    <tr><td>G</td><td>float64</td><td>Number of games played</td></tr>
+    <tr><td>GS</td><td>float64</td><td>Number of games started</td></tr>
+    <tr><td>MP</td><td>float64</td><td>Minutes played</td></tr>
+    <tr><td>FG</td><td>float64</td><td>Field goals made</td></tr>
+    <tr><td>FGA</td><td>float64</td><td>Field goals attempted</td></tr>
+    <tr><td>FG%</td><td>float64</td><td>Field goal percentage</td></tr>
+    <tr><td>3P</td><td>float64</td><td>Three-point field goals made</td></tr>
+    <tr><td>3PA</td><td>float64</td><td>Three-point field goals attempted</td></tr>
+    <tr><td>3P%</td><td>float64</td><td>Three-point field goal percentage</td></tr>
+    <tr><td>2P</td><td>float64</td><td>Two-point field goals made</td></tr>
+    <tr><td>2PA</td><td>float64</td><td>Two-point field goals attempted</td></tr>
+    <tr><td>2P%</td><td>float64</td><td>Two-point field goal percentage</td></tr>
+    <tr><td>eFG%</td><td>float64</td><td>Effective field goal percentage</td></tr>
+    <tr><td>FT</td><td>float64</td><td>Free throws made</td></tr>
+    <tr><td>FTA</td><td>float64</td><td>Free throws attempted</td></tr>
+    <tr><td>FT%</td><td>float64</td><td>Free throw percentage</td></tr>
+    <tr><td>ORB</td><td>float64</td><td>Offensive rebounds</td></tr>
+    <tr><td>DRB</td><td>float64</td><td>Defensive rebounds</td></tr>
+    <tr><td>TRB</td><td>float64</td><td>Total rebounds</td></tr>
+    <tr><td>AST</td><td>float64</td><td>Assists</td></tr>
+    <tr><td>STL</td><td>float64</td><td>Steals</td></tr>
+    <tr><td>BLK</td><td>float64</td><td>Blocks</td></tr>
+    <tr><td>TOV</td><td>float64</td><td>Turnovers</td></tr>
+    <tr><td>PF</td><td>float64</td><td>Personal fouls</td></tr>
+    <tr><td>PTS</td><td>float64</td><td>Total points scored</td></tr>
+    <tr><td>Year</td><td>int64</td><td>Season year</td></tr>
+    <tr><td>USG</td><td>float64</td><td>Usage percentage — estimate of team plays used by the player while on floor</td></tr>
+    <tr><td>TS%</td><td>float64</td><td>True shooting percentage</td></tr>
+    <tr><td>AST_TO</td><td>float64</td><td>Assist-to-turnover ratio</td></tr>
+    <tr><td>REB_per_min</td><td>float64</td><td>Rebounds per minute</td></tr>
+    <tr><td>PTS_per_FGA</td><td>float64</td><td>Points scored per field goal attempt</td></tr>
+    <tr><td>FT_rate</td><td>float64</td><td>Free throw rate (FTA per FGA)</td></tr>
+    <tr><td>3P_rate</td><td>float64</td><td>Three-point attempt rate (3PA per FGA)</td></tr>
+    <tr><td>EFF</td><td>float64</td><td>Player efficiency rating</td></tr>
+    <tr><td>TOV%</td><td>float64</td><td>Turnover percentage (estimated percentage of possessions ending in a TO)</td></tr>
+    <tr><td>PF_per_min</td><td>float64</td><td>Personal fouls per minute</td></tr>
+    <tr><td>STL_per_min</td><td>float64</td><td>Steals per minute</td></tr>
+    <tr><td>BLK_per_min</td><td>float64</td><td>Blocks per minute</td></tr>
+    <tr><td>TRB_rate</td><td>float64</td><td>Rebound rate (estimated percentage of available rebounds grabbed)</td></tr>
+    <tr><td>PTS_log</td><td>float64</td><td>Log-transformed points</td></tr>
+    <tr><td>AST_log</td><td>float64</td><td>Log-transformed assists</td></tr>
+    <tr><td>TRB_log</td><td>float64</td><td>Log-transformed total rebounds</td></tr>
+    <tr><td>STL_log</td><td>float64</td><td>Log-transformed steals</td></tr>
+    <tr><td>BLK_log</td><td>float64</td><td>Log-transformed blocks</td></tr>
+    <tr><td>TOV_log</td><td>float64</td><td>Log-transformed turnovers</td></tr>
+  </tbody>
+</table>
 
 # Results
 The project generates a new dataframe with the following columns:
