@@ -28,17 +28,17 @@ Accurate predictions of full-season player stats can have wide-reaching benefits
   <tbody>
     <tr><td>Age</td><td>float64</td><td>Age of the player</td></tr>
     <tr><td>G</td><td>float64</td><td>Number of games played</td></tr>
-    <tr><td>GS</td><td>float64</td><td>Number of games started</td></tr>
-    <tr><td>MP</td><td>float64</td><td>Minutes played</td></tr>
+    <tr><td>GS</td><td>float64</td><td>Games started</td></tr>
+    <tr><td>MP</td><td>float64</td><td>Total minutes played</td></tr>
     <tr><td>FG</td><td>float64</td><td>Field goals made</td></tr>
     <tr><td>FGA</td><td>float64</td><td>Field goals attempted</td></tr>
     <tr><td>FG%</td><td>float64</td><td>Field goal percentage</td></tr>
-    <tr><td>3P</td><td>float64</td><td>Three-point field goals made</td></tr>
-    <tr><td>3PA</td><td>float64</td><td>Three-point field goals attempted</td></tr>
-    <tr><td>3P%</td><td>float64</td><td>Three-point field goal percentage</td></tr>
-    <tr><td>2P</td><td>float64</td><td>Two-point field goals made</td></tr>
-    <tr><td>2PA</td><td>float64</td><td>Two-point field goals attempted</td></tr>
-    <tr><td>2P%</td><td>float64</td><td>Two-point field goal percentage</td></tr>
+    <tr><td>3P</td><td>float64</td><td>3-point field goals made</td></tr>
+    <tr><td>3PA</td><td>float64</td><td>3-point field goals attempted</td></tr>
+    <tr><td>3P%</td><td>float64</td><td>3-point field goal percentage</td></tr>
+    <tr><td>2P</td><td>float64</td><td>2-point field goals made</td></tr>
+    <tr><td>2PA</td><td>float64</td><td>2-point field goals attempted</td></tr>
+    <tr><td>2P%</td><td>float64</td><td>2-point field goal percentage</td></tr>
     <tr><td>eFG%</td><td>float64</td><td>Effective field goal percentage</td></tr>
     <tr><td>FT</td><td>float64</td><td>Free throws made</td></tr>
     <tr><td>FTA</td><td>float64</td><td>Free throws attempted</td></tr>
@@ -53,25 +53,33 @@ Accurate predictions of full-season player stats can have wide-reaching benefits
     <tr><td>PF</td><td>float64</td><td>Personal fouls</td></tr>
     <tr><td>PTS</td><td>float64</td><td>Total points scored</td></tr>
     <tr><td>Year</td><td>int64</td><td>Season year</td></tr>
-    <tr><td>USG</td><td>float64</td><td>Usage percentage — estimate of team plays used by the player while on floor</td></tr>
+    <tr><td>USG</td><td>float64</td><td>Usage rate (traditional)</td></tr>
     <tr><td>TS%</td><td>float64</td><td>True shooting percentage</td></tr>
     <tr><td>AST_TO</td><td>float64</td><td>Assist-to-turnover ratio</td></tr>
-    <tr><td>REB_per_min</td><td>float64</td><td>Rebounds per minute</td></tr>
-    <tr><td>PTS_per_FGA</td><td>float64</td><td>Points scored per field goal attempt</td></tr>
+    <tr><td>REB_per_min</td><td>float64</td><td>Total rebounds per minute</td></tr>
+    <tr><td>PTS_per_FGA</td><td>float64</td><td>Points per field goal attempt</td></tr>
     <tr><td>FT_rate</td><td>float64</td><td>Free throw rate (FTA per FGA)</td></tr>
-    <tr><td>3P_rate</td><td>float64</td><td>Three-point attempt rate (3PA per FGA)</td></tr>
-    <tr><td>EFF</td><td>float64</td><td>Player efficiency rating</td></tr>
-    <tr><td>TOV%</td><td>float64</td><td>Turnover percentage (estimated percentage of possessions ending in a TO)</td></tr>
-    <tr><td>PF_per_min</td><td>float64</td><td>Personal fouls per minute</td></tr>
+    <tr><td>3P_rate</td><td>float64</td><td>3-point attempt rate (3PA per FGA)</td></tr>
+    <tr><td>EFF</td><td>float64</td><td>Player efficiency rating per minute</td></tr>
+    <tr><td>TOV%</td><td>float64</td><td>Turnover percentage</td></tr>
+    <tr><td>PF_per_min</td><td>float64</td><td>Fouls per minute</td></tr>
     <tr><td>STL_per_min</td><td>float64</td><td>Steals per minute</td></tr>
     <tr><td>BLK_per_min</td><td>float64</td><td>Blocks per minute</td></tr>
-    <tr><td>TRB_rate</td><td>float64</td><td>Rebound rate (estimated percentage of available rebounds grabbed)</td></tr>
+    <tr><td>TRB_rate</td><td>float64</td><td>Rebound rate (TRB per MP)</td></tr>
     <tr><td>PTS_log</td><td>float64</td><td>Log-transformed points</td></tr>
     <tr><td>AST_log</td><td>float64</td><td>Log-transformed assists</td></tr>
     <tr><td>TRB_log</td><td>float64</td><td>Log-transformed total rebounds</td></tr>
     <tr><td>STL_log</td><td>float64</td><td>Log-transformed steals</td></tr>
     <tr><td>BLK_log</td><td>float64</td><td>Log-transformed blocks</td></tr>
     <tr><td>TOV_log</td><td>float64</td><td>Log-transformed turnovers</td></tr>
+    <tr><td>USG%</td><td>float64</td><td>Usage percentage (estimated possession-based)</td></tr>
+    <tr><td>PTS_per_TSA</td><td>float64</td><td>Points per true shot attempt = PTS / (FGA + 0.44 × FTA)</td></tr>
+    <tr><td>TRB%_approx</td><td>float64</td><td>Approximate rebound rate = TRB / (MP × team rebounds)</td></tr>
+    <tr><td>STL%</td><td>float64</td><td>Steal percentage (approximate)</td></tr>
+    <tr><td>BLK%</td><td>float64</td><td>Block percentage (approximate)</td></tr>
+    <tr><td>Raw_EFF</td><td>float64</td><td>Raw efficiency = PTS + TRB + AST + STL + BLK - Missed FG/FT - TOV</td></tr>
+    <tr><td>Load</td><td>float64</td><td>Estimated offensive load (blend of usage and creation)</td></tr>
+    <tr><td>Creation_proxy</td><td>float64</td><td>Proxy for offensive creation (AST + USG%)</td></tr>
   </tbody>
 </table>
 
