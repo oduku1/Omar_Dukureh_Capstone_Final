@@ -1,6 +1,6 @@
 # NBA Player Performance Prediction
 ## Problem Area:
-My area of interest is sports analytics, especially within the realm of basketball. One major challenge in this field is estimating how well a player will perform across an entire season, considering factors like team trades, injuries, player development, and changing team dynamics. Traditional stats like points per game and field goal percentage are helpful but don't always give a full picture when projecting long-term outcomes. My project will aim to predict season-long stats—such as total points, rebounds, and assists—for NBA players in upcoming seasons wiwth more advanced metrics like usage rate, true shooting percentage, and advanced defensive metrics.
+My area of interest is sports analytics, especially within the realm of basketball. One major challenge in this field is estimating how well a player will perform across an entire season. Traditional stats like points per game and field goal percentage are helpful but don't always give a full picture when projecting long-term outcomes. My project will aim to predict season-long stats—such as total points, rebounds, and assists—for NBA players in upcoming seasons with more advanced metrics like usage rate, true shooting percentage, and advanced defensive metrics.
 
 ## Affected Stakeholders 
 This project will benefit NBA teams, analysts, bettors, and users of fantasy basketball software. Teams can use these long-term projections to plan trades, rotations, and development strategies. Fantasy basketball players and sports bettors can gain an edge by anticipating breakout seasons or underperforming players. Analysts can use these models to explore broader trends and player trajectories.
@@ -12,7 +12,7 @@ Machine learning can significantly improve long-term performance prediction by a
 Accurate predictions of full-season player stats can have wide-reaching benefits. The fantasy sports industry alone is worth over $30.4 billion and is projected to reach $84.98 billion USD by 2032 (SkyQuest). Sportsbooks use predictive models to set odds, and more accurate forecasts can improve this process. NBA teams can use season-long predictions to make informed decisions around player contracts, rotations, and long-term strategy.
 
 ## Dataset Description
- The dataset that I used for this is the NBA Player Stats dataset from Basketball Reference, This includes data from the 2018-2019 NBA season to the 2023-2024 NBA season.
+ The dataset that I used for this is the NBA player Stats dataset from Basketball Reference, This includes data from the 2018-2019 NBA season to the 2023-2024 NBA season.
  The data includes player statistics such as points, rebounds, assists, and minutes played.
 
 ### Data dictionary
