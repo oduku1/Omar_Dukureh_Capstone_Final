@@ -1,4 +1,4 @@
-# NBA Player Performance Prediction
+# NBA Player Win Shares Machine Learning Project 
 ## Problem Area:
 My area of interest is sports analytics, especially within the realm of basketball. One major challenge in this field is estimating how well a player will perform across an entire season. Traditional stats like points per game and field goal percentage are helpful but don't always give a full picture when projecting long-term outcomes. My project will aim to predict player win shares, which is a more comprehensive measure of a player's contribution to their team's success.
 
