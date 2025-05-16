@@ -27,8 +27,9 @@ The impact of this project will be significant. Teams can use these predictions 
     </tr>
   </thead>
   <tbody>
-    <tr><td>Age</td><td>float64</td><td>Age of the player</td></tr>
-    <tr><td>G</td><td>float64</td><td>Number of games played</td></tr>
+   <tr><td>Player</td><td>object</td><td>Name of the player</td></tr>
+   <tr><td>Age</td><td>float64</td><td>Age of the player</td></tr>
+   <tr><td>G</td><td>float64</td><td>Number of games played</td></tr>
     <tr><td>GS</td><td>float64</td><td>Games started</td></tr>
     <tr><td>MP</td><td>float64</td><td>Total minutes played</td></tr>
     <tr><td>FG</td><td>float64</td><td>Field goals made</td></tr>
@@ -54,35 +55,30 @@ The impact of this project will be significant. Teams can use these predictions 
     <tr><td>PF</td><td>float64</td><td>Personal fouls</td></tr>
     <tr><td>PTS</td><td>float64</td><td>Total points scored</td></tr>
     <tr><td>Year</td><td>int64</td><td>Season year</td></tr>
-    <tr><td>USG</td><td>float64</td><td>Usage rate (traditional)</td></tr>
-    <tr><td>TS%</td><td>float64</td><td>True shooting percentage</td></tr>
-    <tr><td>AST_TO</td><td>float64</td><td>Assist-to-turnover ratio</td></tr>
-    <tr><td>REB_per_min</td><td>float64</td><td>Total rebounds per minute</td></tr>
-    <tr><td>PTS_per_FGA</td><td>float64</td><td>Points per field goal attempt</td></tr>
-    <tr><td>FT_rate</td><td>float64</td><td>Free throw rate (FTA per FGA)</td></tr>
-    <tr><td>3P_rate</td><td>float64</td><td>3-point attempt rate (3PA per FGA)</td></tr>
-    <tr><td>EFF</td><td>float64</td><td>Player efficiency rating per minute</td></tr>
-    <tr><td>TOV%</td><td>float64</td><td>Turnover percentage</td></tr>
-    <tr><td>PF_per_min</td><td>float64</td><td>Fouls per minute</td></tr>
-    <tr><td>STL_per_min</td><td>float64</td><td>Steals per minute</td></tr>
-    <tr><td>BLK_per_min</td><td>float64</td><td>Blocks per minute</td></tr>
-    <tr><td>TRB_rate</td><td>float64</td><td>Rebound rate (TRB per MP)</td></tr>
-    <tr><td>PTS_log</td><td>float64</td><td>Log-transformed points</td></tr>
-    <tr><td>AST_log</td><td>float64</td><td>Log-transformed assists</td></tr>
-    <tr><td>TRB_log</td><td>float64</td><td>Log-transformed total rebounds</td></tr>
-    <tr><td>STL_log</td><td>float64</td><td>Log-transformed steals</td></tr>
-    <tr><td>BLK_log</td><td>float64</td><td>Log-transformed blocks</td></tr>
-    <tr><td>TOV_log</td><td>float64</td><td>Log-transformed turnovers</td></tr>
-    <tr><td>USG%</td><td>float64</td><td>Usage percentage (estimated possession-based)</td></tr>
-    <tr><td>PTS_per_TSA</td><td>float64</td><td>Points per true shot attempt = PTS / (FGA + 0.44 × FTA)</td></tr>
-    <tr><td>TRB%_approx</td><td>float64</td><td>Approximate rebound rate = TRB / (MP × team rebounds)</td></tr>
-    <tr><td>STL%</td><td>float64</td><td>Steal percentage (approximate)</td></tr>
-    <tr><td>BLK%</td><td>float64</td><td>Block percentage (approximate)</td></tr>
-    <tr><td>Raw_EFF</td><td>float64</td><td>Raw efficiency = PTS + TRB + AST + STL + BLK - Missed FG/FT - TOV</td></tr>
-    <tr><td>Load</td><td>float64</td><td>Estimated offensive load (blend of usage and creation)</td></tr>
-    <tr><td>Creation_proxy</td><td>float64</td><td>Proxy for offensive creation (AST + USG%)</td></tr>
+    <tr><td>WS</td><td>float64</td><td>Win shares</td></tr>
+    <tr><td>VORP</td><td>float64</td><td>Value over replacement player</td></tr>
+    <tr></td>DBPM<td>float64</td><td>Defensive box plus-minus</td></tr>
+    <tr><td>PER</td><td>float64</td><td>Player efficiency rating</td></tr>
+    <tr><td>BPM</td><td>float64</td><td>Box plus-minus</td></tr>
+    <tr><td>USG%</td><td>float64</td><td>Usage Percentage</td></tr>
+    <tr><td>STL%</td><td>float64</td><td>Steal Percentage</td></tr>
+    <tr><td>TS%</td><td>float64</td><td>True Shooting Percentage</td></tr>
+    <tr><td>PTS_per_TSA</td><td>float64</td><td>Points per True Shooting Attempt</td></tr>
+    <tr><td>FT_rate</td><td>float64</td><td>Free Throw Rate</td></tr>
+    <tr><td>3P_rate</td><td>float64</td><td>Three-Point Attempt Rate</td></tr>
+    <tr><td>AST_TO</td><td>float64</td><td>Assist-to-Turnover Ratio</td></tr>
+    <tr><td>TOV%</td><td>float64</td><td>Turnover Percentage</td></tr>
+    <tr><td>TRB%_approx</td><td>float64</td><td>Approximate Total Rebound Percentage</td></tr>
+    <tr><td>STL_per_min</td><td>float64</td><td>Steals per Minute</td></tr>
+    <tr><td>BLK%</td><td>float64</td><td>Block Percentage</td></tr>
+    <tr><td>Raw_EFF</td><td>float64</td><td>Raw Efficiency</td></tr>
+    <tr><td>PF_per_min</td><td>float64</td><td>Personal Fouls per Minute</td></tr>
+    <tr><td>Load</td><td>float64</td><td>Offensive Load</td></tr>
+    <tr><td>Creation_proxy</td><td>float64</td><td>Shot Creation Proxy</td></tr>
+    <tr><td>log_WS</td><td>float64</td><td>Logarithm of Win Shares</td></tr>
   </tbody>
 </table>
+
 
 # Results
 The project will generate a new dataframe with the following columns:
