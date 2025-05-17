@@ -1,4 +1,10 @@
 # NBA Player Win Shares Machine Learning Project 
+
+Omar Dukureh | Math 377 | Spring 2025
+
+Table of Contents
+- [Introduction](#introduction)
+
 ## Problem Area:
 My area of interest is sports analytics, especially within the realm of basketball. One major challenge in this field is estimating how well a player will perform across an entire season. Traditional stats like points per game and field goal percentage are helpful but don't always give a full picture when projecting long-term outcomes. My project will aim to predict player win shares, which is a more comprehensive measure of a player's contribution to their team's success.
 
@@ -12,7 +18,7 @@ Machine learning can significantly improve long-term performance prediction by a
 The impact of this project will be significant. Teams can use these predictions to make informed decisions about player trades, rotations, and development strategies. Fantasy basketball players and sports bettors can gain an edge by anticipating breakout seasons or underperforming players. Analysts can use these models to explore broader trends and player trajectories.
 
 ## Dataset Description
- The dataset that I used for this is the NBA player Stats dataset from Basketball Reference, This includes data from the 2018-2019 NBA season to the 2023-2024 NBA season.
+ The dataset that I used for this is the NBA player Stats dataset from Basketball Reference, This includes data from the 2018-2019 NBA season to the 2024-2025 NBA season.
  The data includes player statistics such as points, rebounds, assists, and minutes played.
 - Source : Basketball Reference
 - Raw Data : /data/
