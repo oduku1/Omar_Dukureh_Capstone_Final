@@ -6,6 +6,11 @@ Table of Contents
 - [PROJECT OVERVIEW](#project-overview)
 - [DATASET DESCRIPTION](#dataset-description)
 - [PROJECT STRUCTURE](#project-structure)
+- [Notebook & Modules](#notebook--modules)
+- [RESULTS](#results)
+- [Slide Deck](#slide-deck)
+- [License](#license)
+
 
 
 # Project Overview
@@ -94,34 +99,27 @@ The impact of this project will be significant. Teams can use these predictions 
 </table>
 
 
-# Project Structure
-Capstone_377/
-├── .venv/
-├── data/
-│ ├── raw/ # Immutable source data
-│ └── processed/ # Cleaned, feature‑engineered data
-│
-├── notebooks/ # Jupyter notebooks
-│ ├── 1_data_prep.ipynb
-│ ├── 2_eda.ipynb
-│ ├── 3_baseline_models.ipynb
-│ └── 4_final_modeling.ipynb
-│
-├── outputs/ │ ├── models/
-│ └── figures/
-│ └── models/
-├── slides/ # Slide deck PDF & source
-│ ├── Capstone_Final_Presentation.pdf
-│ └── Capstone_Final_Presentation.pptx
-
-
 # Notebook & Modules 
-| Feature       | Description                        | Status   | Notes                        |
-|--------------|------------------------------------|----------|------------------------------|
-| Data Cleaning| Remove nulls and outliers          | ✅ Done  | Used pandas                 |
-| Model Train  | XGBoost Regression on 2024 stats   | ✅ Done  | 85% R² score                |
-| Evaluation   | Test set RMSE                      | ⏳ In Progress | Need final test run     |
-| Visualization| Matplotlib plots of predictions    | ❌ Not Started |                              |
-| README       | Update with usage instructions     | ❌ Not Started | Add example usage            |
+| Path       | Purpose                        | 
+|--------------|------------------------------------|
+|  notebooks/1_data_prep.ipynb  | Data loading, cleaning and feature engineering | 
+| notebooks/2_eda.ipynb  | Visual and statistical explortion of data  | 
+| notebooks/3_modeling.ipynb  | creating machine learning models                    | 
+| notebooks/4_final_modeling.ipynba| Final model and model evaluation |
 
 
+# Results 
+
+- Final model: XGGBoost, stored in outputs/models/xgboost.pkl
+- Key figures: stored in outputs/figures/
+- Metrics: documented in notebooks and slides 
+
+
+# Slide Deck
+
+Location: slides/
+Slides containing overview of project, methodology, and results.
+
+
+# License
+This project is licensed under the MIT License – see LICENSE for details.
