@@ -110,7 +110,7 @@ The impact of this project will be significant. Teams can use these predictions 
 
 # Results 
 
-- Final model: XGGBoost, stored in outputs/models/xgboost.pkl
+- Final model: XGBoost, stored in outputs/models/xgboost.pkl
 - Key figures: stored in outputs/figures/
 - Metrics: documented in notebooks and slides 
 
