@@ -4,6 +4,8 @@ Omar Dukureh | Math 377 | Spring 2025
 
 Table of Contents
 - [PROJECT OVERVIEW](#project-overview)
+- [DATASET DESCRIPTION](#dataset-description)
+- [PROJECT STRUCTURE](#project-structure)
 
 
 # Project Overview
@@ -19,11 +21,13 @@ Machine learning can significantly improve long-term performance prediction by a
 ## The Impact:
 The impact of this project will be significant. Teams can use these predictions to make informed decisions about player trades, rotations, and development strategies. Fantasy basketball players and sports bettors can gain an edge by anticipating breakout seasons or underperforming players. Analysts can use these models to explore broader trends and player trajectories.
 
-## Dataset Description
+# Dataset Description
  The dataset that I used for this is the NBA player Stats dataset from Basketball Reference, This includes data from the 2018-2019 NBA season to the 2024-2025 NBA season.
  The data includes player statistics such as points, rebounds, assists, and minutes played.
 - Source : Basketball Reference
-- Raw Data : /data/
+- Raw Data : Located under data/raw/
+- Processed Data : Located under data/processed/
+
 ### Data dictionary
 
 <table>
@@ -84,36 +88,40 @@ The impact of this project will be significant. Teams can use these predictions 
     <tr><td>Load</td><td>float64</td><td>Offensive Load</td></tr>
     <tr><td>Creation_proxy</td><td>float64</td><td>Shot Creation Proxy</td></tr>
     <tr><td>log_WS</td><td>float64</td><td>Logarithm of Win Shares</td></tr>
+    <tr><td>OBPM</td><td>float64</td><td>Offensive Box Plus-Minus</td></tr>
+    <tr><td>DBPM</td><td>float64</td><td>Defensive Box Plus-Minus</td></tr>
   </tbody>
 </table>
 
 
-# Results
-The project will generate a new dataframe with the following columns:
-- Player: The name of the player.
-- Asists: The number of assists made by the player.
-- Steals: The number of steals made by the player.
-- Blocks: The number of blocks made by the player.
-- TRB: The total number of rebounds made by the player.
-- TOV : The number of turnovers made by the player.
-** These are seasson average stats for the player that the model is predicting ***
+# Project Structure
+Capstone_377/
+├── .venv/
+├── data/
+│ ├── raw/ # Immutable source data
+│ └── processed/ # Cleaned, feature‑engineered data
+│
+├── notebooks/ # Jupyter notebooks
+│ ├── 1_data_prep.ipynb
+│ ├── 2_eda.ipynb
+│ ├── 3_baseline_models.ipynb
+│ └── 4_final_modeling.ipynb
+│
+├── outputs/ │ ├── models/
+│ └── figures/
+│ └── models/
+├── slides/ # Slide deck PDF & source
+│ ├── Capstone_Final_Presentation.pdf
+│ └── Capstone_Final_Presentation.pptx
 
-It will be a data frame that compares the predicted stats to the actual stats for the player.
 
-## Limitations
+# Notebook & Modules 
+| Feature       | Description                        | Status   | Notes                        |
+|--------------|------------------------------------|----------|------------------------------|
+| Data Cleaning| Remove nulls and outliers          | ✅ Done  | Used pandas                 |
+| Model Train  | XGBoost Regression on 2024 stats   | ✅ Done  | 85% R² score                |
+| Evaluation   | Test set RMSE                      | ⏳ In Progress | Need final test run     |
+| Visualization| Matplotlib plots of predictions    | ❌ Not Started |                              |
+| README       | Update with usage instructions     | ❌ Not Started | Add example usage            |
 
-- Limited time frames: The dataset only covers the 2020-2021 season to the 2023-2024 season.
-- Small sample size: The dataset contains a limited number of players, which may limit the generalizability of the results.
-- Non Specific Data: The dataset does not provide information about the specific team or coach that the player is on, which could be important for predicting player performance.
-- Limited features: The dataset only includes minimal advanced statistics such as USG, TS%, etc, which may not be sufficient for accurate predictions for certain targets. 
-
-## Future Work
-
-- Expand dataset: Collect more data on player performance to improve the accuracy of the predictions.
-- Incorporate additional features: Incorporate additional features such as team performance, coaching style, and player health to improve the accuracy of the predictions.
-- Use more advanced machine learning techniques: Explore the use of more advanced machine learning techniques such as Deep learning to improve the accuracy of the predictions.
-- Predict game-by-game performance: Predict player performance on a game-by-game basis to provide more detailed insights into player performance.
-
-## References
-SkyQuest. “Fantasy Sports Market Size & Share - Industry Growth: 2032.” Fantasy Sports Market Size & Share - Industry Growth | 2032, www.skyquestt.com/report/fantasy-sports-market#:~:text=Fantasy%20Sports%20Market%20size%20was,period%20(2025%2D2032). Accessed 30 Mar. 2025.
 
