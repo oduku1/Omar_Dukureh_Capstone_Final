@@ -74,7 +74,6 @@ The impact of this project will be significant. Teams can use these predictions 
     <tr><td>Year</td><td>int64</td><td>Season year</td></tr>
     <tr><td>WS</td><td>float64</td><td>Win shares</td></tr>
     <tr><td>VORP</td><td>float64</td><td>Value over replacement player</td></tr>
-    <tr></td>DBPM<td>float64</td><td>Defensive box plus-minus</td></tr>
     <tr><td>PER</td><td>float64</td><td>Player efficiency rating</td></tr>
     <tr><td>BPM</td><td>float64</td><td>Box plus-minus</td></tr>
     <tr><td>USG%</td><td>float64</td><td>Usage Percentage</td></tr>
