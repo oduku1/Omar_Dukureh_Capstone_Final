@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Load CSV
-dataframe = pd.read_csv("/Users/omardukureh12/Capstone_377/outputs/figures/WS_compare.csv")
+dataframe = pd.read_csv("/Users/omardukureh12/Omar_Dukureh_Capstone_Final/outputs/figures/WS_compare.csv")
 dataframe.columns = dataframe.columns.str.strip()  # Clean headers
 
 player = st.sidebar.selectbox("Select a Player", dataframe['Player'].unique())
