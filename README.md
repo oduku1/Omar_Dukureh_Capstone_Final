@@ -105,6 +105,7 @@ The impact of this project will be significant. Teams can use these predictions 
 | notebooks/2_eda.ipynb  | Visual and statistical explortion of data  | 
 | notebooks/3_modeling.ipynb  | creating machine learning models                    | 
 | notebooks/4_final_modeling.ipynba| Final model and model evaluation |
+| nnotebooks/app.py | Code for the interactive web app |
 
 
 # Results 
