@@ -5,7 +5,6 @@ Omar Dukureh | Math 377 | Spring 2025
 Table of Contents
 - [PROJECT OVERVIEW](#project-overview)
 - [DATASET DESCRIPTION](#dataset-description)
-- [PROJECT STRUCTURE](#project-structure)
 - [Notebook & Modules](#notebook--modules)
 - [RESULTS](#results)
 - [Slide Deck](#slide-deck)
